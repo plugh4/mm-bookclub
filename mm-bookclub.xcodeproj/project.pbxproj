@@ -9,11 +9,21 @@
 /* Begin PBXBuildFile section */
 		398C98121CAC7D0B001A595E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98111CAC7D0B001A595E /* main.m */; };
 		398C98151CAC7D0B001A595E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98141CAC7D0B001A595E /* AppDelegate.m */; };
-		398C98181CAC7D0B001A595E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98171CAC7D0B001A595E /* ViewController.m */; };
 		398C981B1CAC7D0C001A595E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398C98191CAC7D0C001A595E /* Main.storyboard */; };
 		398C981E1CAC7D0C001A595E /* mm_bookclub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 398C981C1CAC7D0C001A595E /* mm_bookclub.xcdatamodeld */; };
 		398C98201CAC7D0C001A595E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 398C981F1CAC7D0C001A595E /* Assets.xcassets */; };
 		398C98231CAC7D0C001A595E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398C98211CAC7D0C001A595E /* LaunchScreen.storyboard */; };
+		398C982C1CAC7EBA001A595E /* FriendList_TableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C982B1CAC7EBA001A595E /* FriendList_TableVC.m */; };
+		398C982E1CAC7F36001A595E /* readers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 398C982D1CAC7F36001A595E /* readers.plist */; };
+		398C983B1CAC824A001A595E /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98301CAC824A001A595E /* Person+CoreDataProperties.m */; };
+		398C983C1CAC824A001A595E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98321CAC824A001A595E /* Person.m */; };
+		398C983D1CAC824A001A595E /* Review+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98341CAC824A001A595E /* Review+CoreDataProperties.m */; };
+		398C983E1CAC824B001A595E /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98361CAC824A001A595E /* Review.m */; };
+		398C983F1CAC824B001A595E /* Book+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98381CAC824A001A595E /* Book+CoreDataProperties.m */; };
+		398C98401CAC824B001A595E /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C983A1CAC824A001A595E /* Book.m */; };
+		398C98431CAC830D001A595E /* FriendSelect_TableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98421CAC830D001A595E /* FriendSelect_TableVC.m */; };
+		398C98491CAD5887001A595E /* Books_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98481CAD5887001A595E /* Books_VC.m */; };
+		398C98711CADD437001A595E /* ReviewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98701CADD437001A595E /* ReviewsTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +31,32 @@
 		398C98111CAC7D0B001A595E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		398C98131CAC7D0B001A595E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		398C98141CAC7D0B001A595E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		398C98161CAC7D0B001A595E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		398C98171CAC7D0B001A595E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		398C981A1CAC7D0C001A595E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		398C981D1CAC7D0C001A595E /* mm_bookclub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mm_bookclub.xcdatamodel; sourceTree = "<group>"; };
 		398C981F1CAC7D0C001A595E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		398C98221CAC7D0C001A595E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		398C98241CAC7D0C001A595E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		398C982A1CAC7EBA001A595E /* FriendList_TableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendList_TableVC.h; sourceTree = "<group>"; };
+		398C982B1CAC7EBA001A595E /* FriendList_TableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendList_TableVC.m; sourceTree = "<group>"; };
+		398C982D1CAC7F36001A595E /* readers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = readers.plist; sourceTree = "<group>"; };
+		398C982F1CAC824A001A595E /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		398C98301CAC824A001A595E /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		398C98311CAC824A001A595E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		398C98321CAC824A001A595E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		398C98331CAC824A001A595E /* Review+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Review+CoreDataProperties.h"; sourceTree = "<group>"; };
+		398C98341CAC824A001A595E /* Review+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Review+CoreDataProperties.m"; sourceTree = "<group>"; };
+		398C98351CAC824A001A595E /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		398C98361CAC824A001A595E /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		398C98371CAC824A001A595E /* Book+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Book+CoreDataProperties.h"; sourceTree = "<group>"; };
+		398C98381CAC824A001A595E /* Book+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Book+CoreDataProperties.m"; sourceTree = "<group>"; };
+		398C98391CAC824A001A595E /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		398C983A1CAC824A001A595E /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		398C98411CAC830D001A595E /* FriendSelect_TableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendSelect_TableVC.h; sourceTree = "<group>"; };
+		398C98421CAC830D001A595E /* FriendSelect_TableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendSelect_TableVC.m; sourceTree = "<group>"; };
+		398C98471CAD5887001A595E /* Books_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Books_VC.h; sourceTree = "<group>"; };
+		398C98481CAD5887001A595E /* Books_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Books_VC.m; sourceTree = "<group>"; };
+		398C986F1CADD437001A595E /* ReviewsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewsTVC.h; path = ../ReviewsTVC.h; sourceTree = "<group>"; };
+		398C98701CADD437001A595E /* ReviewsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewsTVC.m; path = ../ReviewsTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +73,18 @@
 		398C98041CAC7D0B001A595E = {
 			isa = PBXGroup;
 			children = (
+				398C982F1CAC824A001A595E /* Person+CoreDataProperties.h */,
+				398C98301CAC824A001A595E /* Person+CoreDataProperties.m */,
+				398C98311CAC824A001A595E /* Person.h */,
+				398C98321CAC824A001A595E /* Person.m */,
+				398C98331CAC824A001A595E /* Review+CoreDataProperties.h */,
+				398C98341CAC824A001A595E /* Review+CoreDataProperties.m */,
+				398C98351CAC824A001A595E /* Review.h */,
+				398C98361CAC824A001A595E /* Review.m */,
+				398C98371CAC824A001A595E /* Book+CoreDataProperties.h */,
+				398C98381CAC824A001A595E /* Book+CoreDataProperties.m */,
+				398C98391CAC824A001A595E /* Book.h */,
+				398C983A1CAC824A001A595E /* Book.m */,
 				398C980F1CAC7D0B001A595E /* mm-bookclub */,
 				398C980E1CAC7D0B001A595E /* Products */,
 			);
@@ -62,12 +103,19 @@
 			children = (
 				398C98131CAC7D0B001A595E /* AppDelegate.h */,
 				398C98141CAC7D0B001A595E /* AppDelegate.m */,
-				398C98161CAC7D0B001A595E /* ViewController.h */,
-				398C98171CAC7D0B001A595E /* ViewController.m */,
+				398C98411CAC830D001A595E /* FriendSelect_TableVC.h */,
+				398C98421CAC830D001A595E /* FriendSelect_TableVC.m */,
+				398C982A1CAC7EBA001A595E /* FriendList_TableVC.h */,
+				398C982B1CAC7EBA001A595E /* FriendList_TableVC.m */,
+				398C98471CAD5887001A595E /* Books_VC.h */,
+				398C98481CAD5887001A595E /* Books_VC.m */,
+				398C986F1CADD437001A595E /* ReviewsTVC.h */,
+				398C98701CADD437001A595E /* ReviewsTVC.m */,
 				398C98191CAC7D0C001A595E /* Main.storyboard */,
 				398C981F1CAC7D0C001A595E /* Assets.xcassets */,
 				398C98211CAC7D0C001A595E /* LaunchScreen.storyboard */,
 				398C98241CAC7D0C001A595E /* Info.plist */,
+				398C982D1CAC7F36001A595E /* readers.plist */,
 				398C981C1CAC7D0C001A595E /* mm_bookclub.xcdatamodeld */,
 				398C98101CAC7D0B001A595E /* Supporting Files */,
 			);
@@ -140,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				398C98231CAC7D0C001A595E /* LaunchScreen.storyboard in Resources */,
+				398C982E1CAC7F36001A595E /* readers.plist in Resources */,
 				398C98201CAC7D0C001A595E /* Assets.xcassets in Resources */,
 				398C981B1CAC7D0C001A595E /* Main.storyboard in Resources */,
 			);
@@ -152,10 +201,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398C98181CAC7D0B001A595E /* ViewController.m in Sources */,
+				398C98401CAC824B001A595E /* Book.m in Sources */,
+				398C983C1CAC824A001A595E /* Person.m in Sources */,
+				398C983D1CAC824A001A595E /* Review+CoreDataProperties.m in Sources */,
+				398C983F1CAC824B001A595E /* Book+CoreDataProperties.m in Sources */,
 				398C98151CAC7D0B001A595E /* AppDelegate.m in Sources */,
 				398C981E1CAC7D0C001A595E /* mm_bookclub.xcdatamodeld in Sources */,
 				398C98121CAC7D0B001A595E /* main.m in Sources */,
+				398C98711CADD437001A595E /* ReviewsTVC.m in Sources */,
+				398C983E1CAC824B001A595E /* Review.m in Sources */,
+				398C983B1CAC824A001A595E /* Person+CoreDataProperties.m in Sources */,
+				398C98431CAC830D001A595E /* FriendSelect_TableVC.m in Sources */,
+				398C982C1CAC7EBA001A595E /* FriendList_TableVC.m in Sources */,
+				398C98491CAD5887001A595E /* Books_VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
