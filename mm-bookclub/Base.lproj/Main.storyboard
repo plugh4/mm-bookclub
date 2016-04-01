@@ -188,7 +188,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="bOE-Rj-NPJ">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="5IZ-rD-ybv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5IZ-rD-ybv">
                             <connections>
                                 <action selector="onDonePressed:" destination="U1g-K0-JVe" id="7vH-eX-LEU"/>
                             </connections>

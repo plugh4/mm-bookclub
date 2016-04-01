@@ -47,7 +47,7 @@
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
     
     NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"Person"];
-    //    r.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
+    req.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
     req.predicate = [NSPredicate predicateWithFormat:@"isFriend == TRUE"];
     
     NSError *error;
@@ -60,6 +60,18 @@
 }
 
 
+- (NSComparisonResult)localizedCompare:(id)objA objB:(id)objB
+{
+    Person *a = objA;
+    NSArray *namesA = [a.name componentsSeparatedByString:@" "];
+    NSString *lastNameA = (namesA.count > 1) ? (namesA[1]) : (a.name);
+
+    Person *b = objB;
+    NSArray *namesB = [b.name componentsSeparatedByString:@" "];
+    NSString *lastNameB = (namesB.count > 1) ? (namesB[1]) : (b.name);
+    
+    return [lastNameA localizedCompare:lastNameB];
+}
 #pragma mark - UITableView - Select
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));

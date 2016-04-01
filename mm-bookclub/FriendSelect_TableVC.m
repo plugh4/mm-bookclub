@@ -50,7 +50,7 @@
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
 
     NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"Person"];
-    //    r.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
+    req.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
     //    r.predicate = [NSPredicate predicateWithFormat:@"age >= 60 and budget >= 250"];
     
     NSError *error;
