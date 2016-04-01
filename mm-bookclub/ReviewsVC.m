@@ -90,7 +90,6 @@
 
 #pragma mark - UITableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"[%@ %@] %@", self.class, NSStringFromSelector(_cmd), self.myReviews);
     return self.myReviews.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

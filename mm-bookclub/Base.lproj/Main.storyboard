@@ -139,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iQE-Cc-Wo1">
-                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
+                                <rect key="frame" x="0.0" y="48" width="600" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reviewCell" id="33d-Pv-ach">
@@ -174,7 +174,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="iQE-Cc-Wo1" secondAttribute="trailing" constant="-20" id="TBD-bx-Iti"/>
                             <constraint firstItem="iQE-Cc-Wo1" firstAttribute="leading" secondItem="w7a-P1-26E" secondAttribute="leadingMargin" constant="-20" id="eHS-fh-fOH"/>
                             <constraint firstItem="KF0-Uf-uOr" firstAttribute="leading" secondItem="w7a-P1-26E" secondAttribute="leadingMargin" id="idr-Xe-kJz"/>
-                            <constraint firstItem="iQE-Cc-Wo1" firstAttribute="top" secondItem="KF0-Uf-uOr" secondAttribute="bottom" constant="8" id="j3w-Tr-vaL"/>
+                            <constraint firstItem="iQE-Cc-Wo1" firstAttribute="top" secondItem="KF0-Uf-uOr" secondAttribute="bottom" constant="-54" id="j3w-Tr-vaL"/>
                             <constraint firstItem="KF0-Uf-uOr" firstAttribute="top" secondItem="AUh-5R-NpE" secondAttribute="bottom" constant="8" id="svK-M1-nMc"/>
                             <constraint firstItem="iQE-Cc-Wo1" firstAttribute="bottom" secondItem="w7a-P1-26E" secondAttribute="bottomMargin" id="xFU-XT-d2K"/>
                         </constraints>
