@@ -32,9 +32,10 @@
     
     // if empty, import from plist
     if (self.peopleCore.count == 0) {
-        NSMutableArray *people2 = [self importReadersFromPlist].mutableCopy;
+        NSArray *people2 = [self importReadersFromPlist];
+        NSArray *peopleSorted = [people2 sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
         
-        for (NSString *name in people2) {
+        for (NSString *name in peopleSorted) {
             NSLog(@"   Reader: %@", name);
             // create Core object
             Person *pCore = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:self.moc];

@@ -47,8 +47,15 @@
     self.myBooks = self.personCore.books.allObjects;
     [self.tableView reloadData];
 }
+- (void) initMoc {
+    if (!self.moc) {
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        self.moc = appDelegate.managedObjectContext;
+    }
+}
 - (Book *)coreCreateBook:(NSString *)bookTitle {
     NSLog(@"[%@ %@] \"%@\"", self.class, NSStringFromSelector(_cmd), bookTitle);
+    [self initMoc];
     Book *bCore = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:self.moc];
     bCore.title = bookTitle;
     return bCore;
@@ -56,10 +63,7 @@
 -(Book *)coreReadBook:(NSString *)bookTitle {
     NSLog(@"[%@ %@] \"%@\"", self.class, NSStringFromSelector(_cmd), bookTitle);
     
-    if (!self.moc) {
-        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-        self.moc = appDelegate.managedObjectContext;
-    }
+    [self initMoc];
     
     NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"Book"];
     req.predicate = [NSPredicate predicateWithFormat:@"title == %@", bookTitle];
