@@ -23,7 +23,7 @@
 		398C98401CAC824B001A595E /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C983A1CAC824A001A595E /* Book.m */; };
 		398C98431CAC830D001A595E /* FriendSelect_TableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98421CAC830D001A595E /* FriendSelect_TableVC.m */; };
 		398C98491CAD5887001A595E /* Books_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98481CAD5887001A595E /* Books_VC.m */; };
-		398C98711CADD437001A595E /* ReviewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98701CADD437001A595E /* ReviewsTVC.m */; };
+		398C98741CAE0123001A595E /* ReviewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 398C98731CAE0123001A595E /* ReviewsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +55,8 @@
 		398C98421CAC830D001A595E /* FriendSelect_TableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendSelect_TableVC.m; sourceTree = "<group>"; };
 		398C98471CAD5887001A595E /* Books_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Books_VC.h; sourceTree = "<group>"; };
 		398C98481CAD5887001A595E /* Books_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Books_VC.m; sourceTree = "<group>"; };
-		398C986F1CADD437001A595E /* ReviewsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewsTVC.h; path = ../ReviewsTVC.h; sourceTree = "<group>"; };
-		398C98701CADD437001A595E /* ReviewsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewsTVC.m; path = ../ReviewsTVC.m; sourceTree = "<group>"; };
+		398C98721CAE0123001A595E /* ReviewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsVC.h; sourceTree = "<group>"; };
+		398C98731CAE0123001A595E /* ReviewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,17 +101,17 @@
 		398C980F1CAC7D0B001A595E /* mm-bookclub */ = {
 			isa = PBXGroup;
 			children = (
-				398C98131CAC7D0B001A595E /* AppDelegate.h */,
-				398C98141CAC7D0B001A595E /* AppDelegate.m */,
-				398C98411CAC830D001A595E /* FriendSelect_TableVC.h */,
-				398C98421CAC830D001A595E /* FriendSelect_TableVC.m */,
 				398C982A1CAC7EBA001A595E /* FriendList_TableVC.h */,
 				398C982B1CAC7EBA001A595E /* FriendList_TableVC.m */,
 				398C98471CAD5887001A595E /* Books_VC.h */,
 				398C98481CAD5887001A595E /* Books_VC.m */,
-				398C986F1CADD437001A595E /* ReviewsTVC.h */,
-				398C98701CADD437001A595E /* ReviewsTVC.m */,
+				398C98721CAE0123001A595E /* ReviewsVC.h */,
+				398C98731CAE0123001A595E /* ReviewsVC.m */,
 				398C98191CAC7D0C001A595E /* Main.storyboard */,
+				398C98411CAC830D001A595E /* FriendSelect_TableVC.h */,
+				398C98421CAC830D001A595E /* FriendSelect_TableVC.m */,
+				398C98131CAC7D0B001A595E /* AppDelegate.h */,
+				398C98141CAC7D0B001A595E /* AppDelegate.m */,
 				398C981F1CAC7D0C001A595E /* Assets.xcassets */,
 				398C98211CAC7D0C001A595E /* LaunchScreen.storyboard */,
 				398C98241CAC7D0C001A595E /* Info.plist */,
@@ -207,8 +207,8 @@
 				398C983F1CAC824B001A595E /* Book+CoreDataProperties.m in Sources */,
 				398C98151CAC7D0B001A595E /* AppDelegate.m in Sources */,
 				398C981E1CAC7D0C001A595E /* mm_bookclub.xcdatamodeld in Sources */,
+				398C98741CAE0123001A595E /* ReviewsVC.m in Sources */,
 				398C98121CAC7D0B001A595E /* main.m in Sources */,
-				398C98711CADD437001A595E /* ReviewsTVC.m in Sources */,
 				398C983E1CAC824B001A595E /* Review.m in Sources */,
 				398C983B1CAC824A001A595E /* Person+CoreDataProperties.m in Sources */,
 				398C98431CAC830D001A595E /* FriendSelect_TableVC.m in Sources */,

@@ -23,14 +23,22 @@
     [super viewDidLoad];
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
 
+    // init Core Data
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.moc = appDelegate.managedObjectContext;
-    
+    // sqlite location
+    NSURL *url = appDelegate.applicationDocumentsDirectory;
+    NSLog(@"sqlite dir = \n%@", url);
+
     // import from Core
     [self loadFromCore];
     
-    NSURL *url = appDelegate.applicationDocumentsDirectory;
-    NSLog(@"appDocs dir = %@", url);
+
+    self.navigationItem.backBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@""
+                                     style:UIBarButtonItemStylePlain
+                                    target:nil
+                                    action:nil];
 
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,23 +68,18 @@
 }
 
 
-- (NSComparisonResult)localizedCompare:(id)objA objB:(id)objB
-{
-    Person *a = objA;
-    NSArray *namesA = [a.name componentsSeparatedByString:@" "];
-    NSString *lastNameA = (namesA.count > 1) ? (namesA[1]) : (a.name);
-
-    Person *b = objB;
-    NSArray *namesB = [b.name componentsSeparatedByString:@" "];
-    NSString *lastNameB = (namesB.count > 1) ? (namesB[1]) : (b.name);
-    
-    return [lastNameA localizedCompare:lastNameB];
-}
-#pragma mark - UITableView - Select
+#pragma mark - Navigation
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
     Person *pCore = self.peopleCore[indexPath.row];
     [self performSegueWithIdentifier:@"toBooks" sender:pCore];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
+    if ([segue.identifier isEqualToString:@"toBooks"]) {
+        Books_VC *dstVC = [segue destinationViewController];
+        dstVC.personCore = sender;
+    }
 }
 
 
@@ -128,13 +131,5 @@
 }
 */
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
-    if ([segue.identifier isEqualToString:@"toBooks"]) {
-        Books_VC *dstVC = [segue destinationViewController];
-        dstVC.personCore = sender;
-    }
-
-}
 
 @end

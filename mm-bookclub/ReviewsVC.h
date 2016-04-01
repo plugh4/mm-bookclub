@@ -1,5 +1,5 @@
 //
-//  ReviewsTVC.h
+//  ReviewsVC.h
 //  mm-bookclub
 //
 //  Created by Christopher Serra on 3/31/16.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Book.h"
 
-@interface ReviewsTVC : UITableViewController
-
+@interface ReviewsVC : UIViewController
+@property Book *bookCore;
 @end

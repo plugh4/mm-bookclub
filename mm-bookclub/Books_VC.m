@@ -10,6 +10,7 @@
 #import "Person.h"
 #import "AppDelegate.h"
 #import "Book.h"
+#import "ReviewsVC.h"
 
 @interface Books_VC () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -24,20 +25,28 @@
     [super viewDidLoad];
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
 
-    // snapshot of Core Data set
-    self.myBooks = self.personCore.books.allObjects;
-    
     // navbar
-    self.navigationItem.backBarButtonItem.title = @"";
     self.navigationItem.title = self.personCore.name;
+    self.navigationItem.backBarButtonItem =
+        [[UIBarButtonItem alloc] initWithTitle:@""
+                                         style:UIBarButtonItemStylePlain
+                                        target:nil
+                                        action:nil];
+ 
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
-    
+    [self reloadData];
 }
 
+
 #pragma mark - Core Data
+- (void)reloadData {
+    // snapshot of Core Data set
+    self.myBooks = self.personCore.books.allObjects;
+    [self.tableView reloadData];
+}
 - (Book *)coreCreateBook:(NSString *)bookTitle {
     NSLog(@"[%@ %@] \"%@\"", self.class, NSStringFromSelector(_cmd), bookTitle);
     Book *bCore = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:self.moc];
@@ -78,18 +87,20 @@
 }
 
 
-#pragma mark - UITableView - Select
+#pragma mark - Navigation
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Book *bCore = self.myBooks[indexPath.row];
     NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
-    
-    //Person *pCore = self.peopleCore[indexPath.row];
-//    [self performSegueWithIdentifier:@"toBooks" sender:pCore];
+    [self performSegueWithIdentifier:@"toReviews" sender:bCore];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"[%@ %@]", self.class, NSStringFromSelector(_cmd));
+    ReviewsVC *dstVC = [segue destinationViewController];
+    dstVC.bookCore = sender;
 }
 
-- (void)reloadData {
-    self.myBooks = self.personCore.books.allObjects;
-    [self.tableView reloadData];
-}
+
+
 
 #pragma mark - UITextField
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -130,7 +141,7 @@
     return self.myBooks.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"[%@ %@] %lu", self.class, NSStringFromSelector(_cmd), indexPath.row);
+    NSLog(@"[%@ %@] %@", self.class, NSStringFromSelector(_cmd), ((Book *)self.myBooks[indexPath.row]).title);
 
     Book *bCore = self.myBooks[indexPath.row];
 
